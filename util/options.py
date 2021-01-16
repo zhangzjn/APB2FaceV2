@@ -16,15 +16,12 @@ def get_opt():
 
     # logging
     parser.add_argument('--checkpoint', type=str, default='./checkpoints', help='experimental results are saved here')
-    parser.add_argument('--name', type=str, default='AnnVI-vec', help='experimental name')
+    parser.add_argument('--name', type=str, default='AnnVI', help='experimental name')
 
     # data
-    parser.add_argument('--data', type=str, default='AnnVI', help='AnnVI | AnnXXX | VoxCeleb2')
-    parser.add_argument('--data_root', type=str, default='/media/datasets/zhangzjn/AnnVI/feature/')
+    parser.add_argument('--data', type=str, default='AnnVI', help='AnnVI | VoxCeleb2')
+    parser.add_argument('--data_root', type=str, default='/media/datasets/zhangzjn/Audio2Face/AnnVI/feature')
     parser.add_argument('--img_size', type=int, default=256, help='image size')
-    # parser.add_argument('--data', type=str, default='VoxCeleb2', help='AnnVI | AnnXXX | VoxCeleb2')
-    # parser.add_argument('--data_root', type=str, default='/media/datasets/zhangzjn/VoxCeleb2/solve')
-    # parser.add_argument('--img_size', type=int, default=224, help='image size')
     parser.add_argument('--mode', type=str, default='train', help='train | test')
     # model
     parser.add_argument('--trainer', type=str, default='l2face', help='chooses which trainer to use.')
@@ -37,7 +34,6 @@ def get_opt():
     parser.add_argument('--batch_size', type=int, default=16, help='input batch size')
     parser.add_argument('--show_iters', type=int, default=200, help='iteration')
 
-    parser.add_argument('--triplet', type=str2bool, default=False, help='use triplet loss')
     parser.add_argument('--batch_id', type=int, default=4, help='id number')
     parser.add_argument('--batch_img', type=int, default=3, help='image number for one id')
     # test

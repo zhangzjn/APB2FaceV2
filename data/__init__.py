@@ -1,6 +1,5 @@
 import importlib
 import torch
-from .sampler import VCSampler
 
 
 def get_dataset(opt):
@@ -20,11 +19,7 @@ def get_dataset(opt):
     dataset = datasetlib.Dataset_
     dataset_res = dataset(opt)
     if opt.mode == 'train':
-        if opt.triplet:
-            dataloader_res = torch.utils.data.DataLoader(dataset_res, sampler=VCSampler(dataset_res, opt.batch_id, opt.batch_img),
-                                                         batch_size=opt.batch_id * opt.batch_img, num_workers=opt.worker_number)
-        else:
-            dataloader_res = torch.utils.data.DataLoader(dataset_res, batch_size=opt.batch_size, num_workers=opt.worker_number)
+        dataloader_res = torch.utils.data.DataLoader(dataset_res, batch_size=opt.batch_size, num_workers=opt.worker_number)
     elif opt.mode == 'test':
         dataloader_res = torch.utils.data.DataLoader(dataset_res, batch_size=1, num_workers=1)
     return dataloader_res
