@@ -2,7 +2,7 @@
 
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg?style=plastic) ![PyTorch 1.5.1](https://img.shields.io/badge/pytorch-1.5.1-green.svg?style=plastic)
 
-Official pytorch implementation of the paper: "[APB2FACEV2: REAL-TIME AUDIO-GUIDED MULTI-FACE REENACTMENT](https://arxiv.org/pdf/2010.13017.pdf)".
+Official pytorch implementation of the paper: "[APB2FACEV2: REAL-TIME AUDIO-GUIDED MULTI-FACE REENACTMENT](https://ieeexplore.ieee.org/abstract/document/9552566)".
 
 ## Using the Code
 
@@ -37,10 +37,11 @@ Results are stored in `checkpoints/AnnVI-Big/results`
 ### Citation
 
 ```angular2
-@article{zhang2020apb2facev2,
-  title={APB2FaceV2: Real-Time Audio-Guided Multi-Face Reenactment},
-  author={Zhang, Jiangning and Zeng, Xianfang and Xu, Chao and Chen, Jun and Liu, Yong and Jiang, Yunliang},
-  journal={arXiv preprint arXiv:2010.13017},
-  year={2020}
+@article{zhang2021real,
+  title={Real-Time Audio-Guided Multi-Face Reenactment},
+  author={Zhang, Jiangning and Zeng, Xianfang and Xu, Chao and Liu, Yong and Li, Hongliang},
+  journal={IEEE Signal Processing Letters},
+  year={2021},
+  publisher={IEEE}
 }
 ```
